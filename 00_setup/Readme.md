@@ -1,5 +1,8 @@
 # Setup & Toolchain
 
+## Video :-
+[![Youtube Video](https://img.youtube.com/vi/wFreyt5SzUY/0.jpg)](https://www.youtube.com/watch?v=wFreyt5SzUY)
+
 Series: Arduino Bare-Metal Programming with C (No IDE)   
 Board: Arduino Uno [(ATmega328P, 8-bit AVR)](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)   
 Primary OS: `Linux` : with `macOS` and `Windows` instructions included   
