@@ -25,9 +25,9 @@ No sketches. No `.ino` files. No hidden `setup()/loop()` magic ,
 
 ## Series roadmap
 
-#  | Topic | Key concepts |
----|-------|--------------|
-00 | [Setup & Installation](./00_setup/) | Toolchain (`avr-gcc`, `avr-libc`, `avrdude`, `make`), **Linux/macOS/Windows** install, **VS Code config**. 
+| #  | Topic | Key concepts |
+|---|-------|--------------|
+| 00 | [Setup & Installation](./00_setup/) | Toolchain (`avr-gcc`, `avr-libc`, `avrdude`, `make`), **Linux/macOS/Windows** install, **VS Code config**. |
 01 | LED Blink | `DDRx`, `PORTx`.
 02 |  Button Input | Polling input, pull-ups, then `PCINT/INT0` external interrupts
 03 | Timers & PWM | `Timer0/1/2`, prescalers, fast PWM for LED dimming and servo control
