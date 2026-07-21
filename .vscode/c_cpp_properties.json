@@ -1,0 +1,82 @@
+{
+    // VS Code C/C++ extension config for bare-metal AVR (ATmega328P) development.
+    // Only affects IntelliSense (autocomplete/navigation) - it does NOT affect
+    // how the code is actually compiled or flashed. Makefile controls that.
+    //
+    // VS Code auto-selects the configuration matching the OS (by "name").
+    // If paths below don't resolve, run the "verify" command listed in each
+    // section's comment to find the actual install paths and adjust.
+    "configurations": [
+        {
+            // ---- LINUX (Ubuntu, apt install gcc-avr avr-libc) ----
+            // Verify with: dpkg -L avr-libc | grep io.h
+            //              dpkg -L gcc-avr | grep bin/avr-gcc
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/avr/include/**",
+                "/usr/lib/avr/include/**",
+                "/usr/lib/gcc/avr/*/include/**",
+                "/usr/lib/gcc/avr/*/include-fixed/**"
+            ],
+            "defines": [
+                "__AVR_ATmega328P__",
+                "F_CPU=16000000UL"
+            ],
+            "compilerPath": "/usr/bin/avr-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            // ---- macOS (Homebrew, brew tap osx-cross/avr && brew install avr-gcc) ----
+            // Verify with: brew --prefix avr-gcc
+            //              find "$(brew --prefix avr-gcc)" -name "io.h" -path "*avr/io.h"
+            // Apple Silicon Homebrew prefix is /opt/homebrew, Intel is /usr/local —
+            // adjust compilerPath/includePath below to match `brew --prefix`.
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/avr/include/**",
+                "/opt/homebrew/Cellar/avr-gcc/*/avr/include/**",
+                "/opt/homebrew/Cellar/avr-gcc/*/lib/gcc/avr/*/include/**",
+                "/opt/homebrew/Cellar/avr-gcc/*/lib/gcc/avr/*/include-fixed/**",
+                "/usr/local/avr/include/**",
+                "/usr/local/Cellar/avr-gcc/*/avr/include/**",
+                "/usr/local/Cellar/avr-gcc/*/lib/gcc/avr/*/include/**",
+                "/usr/local/Cellar/avr-gcc/*/lib/gcc/avr/*/include-fixed/**"
+            ],
+            "defines": [
+                "__AVR_ATmega328P__",
+                "F_CPU=16000000UL"
+            ],
+            "compilerPath": "/opt/homebrew/bin/avr-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-x64"
+        },
+        {
+            // ---- WINDOWS (native, MSYS2 MinGW64) ----
+            // Verify with (MSYS2 MinGW64 shell): where avr-gcc
+            //              find /mingw64/avr/include -name io.h
+            // If the WSL2 instead (recommended path from Tutorial 0),
+            // use the "Linux" configuration above - WSL is a Linux environment.
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/msys64/mingw64/avr/include/**",
+                "C:/msys64/mingw64/lib/gcc/avr/*/include/**",
+                "C:/msys64/mingw64/lib/gcc/avr/*/include-fixed/**"
+            ],
+            "defines": [
+                "__AVR_ATmega328P__",
+                "F_CPU=16000000UL"
+            ],
+            "compilerPath": "C:/msys64/mingw64/bin/avr-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
