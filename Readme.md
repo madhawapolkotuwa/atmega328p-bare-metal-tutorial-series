@@ -29,15 +29,15 @@ No sketches. No `.ino` files. No hidden `setup()/loop()` magic ,
 |---|-------|--------------|
 | 00 | [Setup & Installation](./00_setup/) | Toolchain (`avr-gcc`, `avr-libc`, `avrdude`, `make`), **Linux/macOS/Windows** install, **VS Code config**. |
 01 | [LED Blink](./01_led_blink/) | `DDRx`, `PORTx`.
-02 |  [Button Input](./02_button_input/) | Polling input, pull-ups, then `PCINT/INT0` external interrupts
-03 | Timers & PWM | `Timer0/1/2`, prescalers, fast PWM for LED dimming and servo control
-04 | ADC Read | Single-channel ADC, then multi-channel switching
-05 | UART | Polling TX/RX, then interrupt-driven serial I/O
-06 | SPI (Master & Slave) | Full-duplex SPI
-07 | TWI/I2C (Master & Slave) | I2C protocol from scratch, real sensor read (**BMP180**)
-08 | EEPROM Read/Write | Persistent settings storage, wear considerations
-09 | Watchdog Timer | Fault recovery, WDT-triggered reset vs interrupt mode
-10 | Sleep Modes | Power-down mode, wake-on-interrupt, power measurement
-11 | Custom Serial Protocol | Framing, checksums, building a protocol over UART
+02/03 | [Button Input](./02_button_input/) <br> [Interrupt](./02_button_input/) | Polling input, pull-ups, then `PCINT/INT0` external interrupts
+04/05 | [Timers](./04_timers/) <br> [PWM](./05_pwm/) | `Timer0/1/2`, prescalers, fast PWM for LED dimming and servo control
+06 | [UART](./06_uart/) | Polling TX/RX, then interrupt-driven serial I/O 
+07 | [ADC Read](./07_adc/) | Single-channel ADC, then multi-channel switching
+08 | [SPI (Master & Slave)](./08_spi/) | Full-duplex SPI
+09 | [TWI/I2C (Master & Slave)](./09_i2c/) | I2C protocol from scratch, real sensor read (**BMP180**)
+10 | [EEPROM Read/Write](./10_eeprom/) | Persistent settings storage, wear considerations
+11 | [Watchdog Timer](./11_watchdog/) | Fault recovery, WDT-triggered reset vs interrupt mode
+11 | [Sleep Modes](./12_sleep_modes/) | Power-down mode, wake-on-interrupt, power measurement
+12 |[ Custom Serial Protocol](./13_custom_serial_protocol/) | Framing, checksums, building a protocol over UART
 
 
